@@ -1,0 +1,689 @@
+<!doctype html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+
+		<title>reveal.js - The HTML Presentation Framework</title>
+
+		<meta name="description" content="A framework for easily creating beautiful presentations using HTML">
+		<meta name="author" content="Hakim El Hattab">
+
+		<meta name="apple-mobile-web-app-capable" content="yes" />
+		<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/beige副本.css" id="theme">
+
+		<!-- Code syntax highlighting -->
+		<link rel="stylesheet" href="lib/css/zenburn.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+
+		<!--[if lt IE 9]>
+		<script src="lib/js/html5shiv.js"></script>
+		<![endif]-->
+	</head>
+
+	<body>
+
+		<div class="reveal">
+
+			<!-- Any section element inside of this container is displayed as a slide -->
+			<div class="slides">
+
+			<!--section>
+				<p class="fragment grow">grow</p>
+				<p class="fragment shrink">shrink</p>
+				<p class="fragment fade-out">fade-out</p>
+				<p class="fragment current-visible">visible only once</p>
+				<p class="fragment highlight-current-blue">blue only once</p>
+				<p class="fragment highlight-red">highlight-red</p>
+				<p class="fragment highlight-green">highlight-green</p>
+				<p class="fragment highlight-blue">highlight-blue</p>
+			</section-->
+
+				<section data-transition="zoom">
+
+					
+					<h2 style = "color:#145790">英语作文的自动批阅</h1>
+					<h3 style = "color:#145790">自动评分与典型错误的识别</h3>
+					<br>
+					<p style = "margin-left:400px">
+						<large >答辩学生 &nbsp; 叶秋阳<br></large>
+					</p>
+					<p style = "margin-left:400px;">
+						<large >指导教师 &nbsp; 张韧弦<br></large>
+					</p>
+
+				
+
+				</section>
+
+				<section data-transition="zoom" style = "margin-top:-30px">
+					<h2>答辩内容</h2>
+				<blockquote >
+					<ul>
+						<li>课题概述和意义</li>
+						<li>方案概述和系统框架</li>
+						<li>功能实现与实验结果</li>
+						<li>研究结论</li>
+						<li>系统演示</li>
+						<li>Q&amp;A</li>
+					</ul>
+				</blockquote>
+				</section>
+
+				<!-- Example of nested vertical slides -->
+				<section data-background="static/background3.jpeg" data-transition="slide"  data-background-transition="zoom">
+					<section >
+						<h2 style = "font-family:serif">一、&nbsp;课题概述和意义</h2>
+					</section>
+
+					<section>
+						<h2>基本概念</h2>
+						
+						<p>英语作文自动评阅是计算机辅助英语写作教育的一种形式。</p>
+						<ul>
+							<li>作文自动评分</li>
+							<li>典型错误识别</li>
+						</ul>
+						<blockquote>
+						<img src="static/img1.png">
+
+						</blockquote>
+
+					</section>
+					<section>
+						<h2 data-autoslide="300">研究意义</h2>
+						<ul>
+							<li class="fragment fade-in" >课堂资源的补充</li>
+							<li class="fragment fade-in" >教学重心的转移</li>
+							<li class="fragment fade-in" >考试批阅的辅助</li>
+							<li class="fragment fade-in" >学生练习的激励</li>
+
+						</ul>
+						<br>
+					</section>
+				</section>
+
+
+
+
+				<!-- Example of nested vertical slides -->
+				<section data-background="static/background5.png" data-transition="convex"  data-background-transition="slide">
+					<section >
+						<h2 style = "font-family:serif">二、&nbsp;方案概述和系统框架</h2>
+					</section>
+
+					<section data-transition="concave">
+						<h2>实施方案总览</h2>
+					
+						<ul>
+							<li>主要方法
+								<ul>
+									<li>机器学习</li>
+									<li>自然语言处理</li>
+								</ul>
+							<br>
+							<li>开发工具
+								<ul>
+									<li>Python语言</li>
+									<li>NLTK, SKlearn, Django</li>
+								</ul>
+							</li>
+							<br>
+							<li>实施流程
+								<ul>
+									<li>研究阶段</li>
+									<li>系统搭建</li>
+								</ul>
+							</li>
+						</ul>
+
+
+
+					</section>
+					<section data-transition="concave">
+						<h3>步骤一 &nbsp;研究阶段</h2>
+						<p style = "font-size:28px">
+							对于典型错误识别，我们以介词错误识别为例作为研究对象，很多词类错误识别也可用相似的方法实现。系统还实现的拼写建议部分并非使用类似的实验探究的方法。
+						</p>
+						<blockquote style="width:95%">
+							<img src="static/img2.png">
+
+						</blockquote>	
+					</section>
+
+					<section data-transition="concave">
+						<h3>步骤二 &nbsp;系统搭建</h2>
+						<p style = "font-size:28px">
+							系统搭建意味着将研究完毕的模型按照数据流进行连接。
+						</p>
+						<blockquote style="width:75%">
+							<img src="static/img3.png">
+
+						</blockquote>	
+					</section>
+				</section>
+
+
+<!-- 第三章 -->
+
+				<section data-background="static/background4.jpg" data-transition="concave"  data-background-transition="zoom">
+					<section >
+						<h2 style = "font-family:serif">三、&nbsp;功能实现与实验结果</h2>
+					</section>
+
+					<section data-transition="convex">
+						<h3>系统功能总览</h2>
+					
+						<ul style = "font-size:32px">
+							<br>
+
+							<li>非实验性的研究内容
+								<ul>
+									<li>拼写错误识别及建议</li>
+								</ul>
+							<br>
+							<li>机器学习实验研究内容
+								<ul>
+									<li>介词错误识别
+										<ul>
+											<li>介词误用识别</li>
+											<li>介词漏用识别</li>
+										</ul>
+									</li>
+									<br>
+									<li>作文自动评分
+
+									</li>
+								</ul>
+							</li>
+							<br>
+
+						</ul>
+
+
+
+					</section>
+					<!--section data-transition="convex">
+						<h3 style = "">非实验性的研究 &nbsp;<strong>拼写识别与建议</strong></h2>
+						<ul style = "font-size:32px">
+							<li>错误识别
+								<ul>
+									<li>依赖词典文件</li>
+									<li>未登录词库的补充</li>
+								</ul>
+							<li>拼写建议
+								<ul>
+									<li>最小编辑距离</li>
+								</ul>
+							</li>
+						</ul>
+
+						<blockquote style="width:100%">
+							<p style = "font-size:24px">例如，kitten 和 sitting之间的最小编辑距离为3，解释如下：</p>
+							<img src="static/img4.png">
+
+						</blockquote>	
+					</section-->
+
+					<section data-transition="convex">
+						<h3>机器学习实验研究 &nbsp;<strong>原始文档集的获取</strong></h2>
+
+						<blockquote style="width:67%;float:left">
+							<img src="static/img5.png">
+
+						</blockquote>	
+
+						<blockquote style = "width:27%;font-size:28px; float:right">
+								
+								<p align = 'left' style = "font-size:26px">
+									英语作文网作文: 水平参差不齐，是我国中小学生英语写作的典型代表。</p>
+								
+								
+								
+								<p align = 'left' style = "font-size:26px">
+									Simplewiki: 用简单英语书写的维基百科词条，与标准英语相比，具有单词常见、语法简单等特点。</p>
+								
+								
+								
+								<p align = 'left' style = "font-size:26px">
+									两类文档为介词错误识别和自动评分的研究提供了训练数据的原始来源。
+								
+
+						</blockquote>
+												
+					</section>
+
+					<!--section data-transition="convex">
+						<h3 style = "">机器学习实验研究 &nbsp;<strong>介词错误识别</strong></h2>
+
+						<p style = "font-size:28px">
+							介词错误识别的属于二元分类问题。
+
+							<ul>
+								<li>介词误用</li>
+								<li>介词漏用</li>
+							</ul>
+						</p>
+
+						<blockquote style="width:100%">
+							<img src="static/img6.png">
+
+						</blockquote>	
+					</section-->
+
+
+
+					<section data-transition="convex">
+						<h4 style = "margin-bottom:-15px;margin-top:-15px">介词错误识别 &nbsp;<strong>训练语料处理</strong></h2>
+
+
+
+						<blockquote style = "width:30%;font-size:28px; float:left">
+								
+								<p align = 'left' style = "font-size:27px">
+									在原始文档集上进行标注，可以分别得到介词误用和漏用的数据集。
+								</p>
+								<p>
+								<ul>
+									<li >人工标注</li>
+										<ul>
+											<li style = "font-size:24px">批改作文，标注错误</li>
+											<li style = "font-size:24px">效率低，介词错误数不够</li>
+										</ul>
+
+									<br>
+
+									<li>机器标注</li>
+										<ul>
+											<li style = "font-size:24px">不处理</li>
+											<li style = "font-size:24px">介词——>介词</li>
+											<li style = "font-size:24px">介词——>其他词</li>
+											<li style = "font-size:24px">划去介词</li>
+											<li style = "font-size:24px">插入介词</li>
+											<li style = "font-size:24px">效率快，规模巨大</li>
+										</ul>	
+								</ul>
+								</p>
+								
+								
+
+						</blockquote>
+
+						<blockquote style="width:65%;float:right">
+							<img src="static/img7.png">
+
+						</blockquote>	
+												
+					</section>
+
+
+					<section data-transition="convex">
+						<h3 style = "">介词误用识别 &nbsp;<strong>特征设计和提取</strong></h2>
+
+						<p style = "font-size:28px">
+							用于介词误用分类任务的特征定义如下表。通过在介词误用语料库中进行特征抽取，便可搭建完介词误用识别任务的训练数据集。
+						</p>
+
+						<blockquote style="width:80%;font-size:22px;font-family:serif;">
+							<img src="static/img8.png">
+
+
+								<br>例如：
+								I played the piano on the morning <strong>of</strong> April 18 in our auditorium.<br>
+								PRP VBD DT NN IN DT NN <strong>IN</strong> NNP CD IN PRP$ NNP<br>
+								特征BGL抽取结果为（morning, of）
+
+						</blockquote>	
+
+					</section>
+
+
+
+					<section data-transition="convex">
+						<h4 style = "">介词误用识别 &nbsp;<strong>实验结果</strong></h2>
+
+						<p style = "font-size:26px">
+							实验数据是在训练数据集上通过十折交叉验证的方法测出的。后面实验如不指明，均指使用了该方法。词袋：句子中所有出现的词的集合作为特征。
+
+						</p>
+
+						<blockquote style="width:100%;font-size:22px;font-family:serif;">
+							<img src="static/img9.png">
+
+							<!--ul>
+								<li>以介词为中心去提取上下文的特征具有优越性。</li>
+								<li>就介词用法而言，介词前文信息比介词后文信息的指示作用强。</li>
+								<li>大多数的介词使用可通过与介词毗邻的前后两词所决定。</li>
+								<li>朴素贝叶斯的分类效果比最大熵稍逊一筹，但两者识别率都很高。最终选定最大熵分类器和特征集F1。</li>
+							</ul-->
+
+
+						</blockquote>	
+
+					</section>
+
+
+					<section data-transition="convex">
+						<h4 style = "margin-bottom:-15px;margin-top:-15px">介词漏用识别 &nbsp;<strong>概述</strong></h2>
+
+						<p style = "font-size:26px">
+							介词漏用识别和介词误用识别的研究方法类似。
+
+						</p>
+
+						<blockquote style="width:85%;font-size:22px;font-family:serif;">
+							<img src="static/img11.png">
+
+								<br>例如：
+								One reason is that old cities often have a city wall, and most of the city is inside it.<br>
+								CD NN VBZ IN JJ NNS RB VBP DT NN NN , CC JJS IN DT NN VBZ JJ NNP<br>
+								特征NN/VB提取结果为：[reason/is, cities/have, city is] 
+
+								<ul >
+									<li >最终选择支持向量机的分类模型。</li>
+								</ul>
+
+
+						</blockquote>	
+
+					</section>
+
+
+
+					<!--section data-transition="convex">
+						<h4>介词错误识别 &nbsp;<strong>实验结果</strong></h2>
+						
+						<p style = "font-size:26px">
+							二元词袋：将句子中所有毗邻的两个词对取出，作为句子的特征。
+
+
+						</p>
+
+
+						<blockquote style = "width:49%;font-size:28px; float:left">
+							<img src="static/img12.png">								
+
+						</blockquote>
+
+						<blockquote style="width:48%;float:right">
+							<img src="static/img13.png">
+
+						</blockquote>	
+						
+							<ul style="font-size:22px;font-family:serif;">
+								<li>支持向量机的各项指标均衡。决策树可能出现了过拟合现象。</li>
+								<li>特征设计时，单词之间的上下文关系依旧是影响分类准确性的重要因素。</li>
+								<li>介词漏用的识别率比介词误用低。</li>
+								<li>最终选定的模型为支持向量机和设计的特征集。</li>
+							</ul>
+			
+					</section-->
+
+
+					<!--section data-transition="convex">
+						<h4 style = "">介词误用和漏用识别的分类器串接</h2>
+
+						<p style = "font-size:26px">
+							最后识别介词错误时需要将两种介词错误统一汇报，因此需要将两个分类器串接。
+
+						</p>
+
+						<blockquote style="width:50%;">
+							<img src="static/img14.png">
+
+
+						</blockquote>	
+
+					</section-->
+
+
+					<section data-transition="convex">
+						<h4 style = "">介词错误统一汇总</strong></h2>
+
+						<p >
+							<ul style = "font-size:24px">
+
+								<li>汇总方式：对语料库中所有句子同时用两种分类器进行判定。最终结果为两者的合取。</li>
+
+								<li >测试语料库：ABC语料库中使用和simplewiki语料库一样的介词错误混入方式制成，测试句子约50K条，正负例之比1:1。</li>
+
+
+
+							</ul>	
+
+
+						</p>
+
+						<blockquote style="width:100%;font-size:22px;font-family:serif;color:rgb(203, 76, 10);font-style:normal">
+							<img src="static/img15.png">
+
+								<br>
+								
+
+
+
+
+						</blockquote>	
+
+					</section>
+
+
+					<section data-transition="convex">
+						<h4>机器学习实验研究 &nbsp;<strong>作文自动评分</strong></h2>
+
+
+
+						<blockquote style = "width:30%;font-size:28px; float:left;margin-left:">
+								
+								<p align = 'left' style = "font-size:27px">
+									训练数据的标注
+								</p>
+								<p>
+									<ul style="font-size:24px">
+										<li>从原始的学生作文和simplewiki的文章中依照一定规则选出系统的目标作文。分别进行人工标注和机器标注。</li>
+										<br>
+										<br>
+										<li>评分制：0-6分，0.5分一个台阶。人工评分时除了评出最终分数，还顺带记录下了拼写、介词、动词和其它错误。</li>
+										<br>
+									</ul>
+								</p>
+								
+								
+
+						</blockquote>
+
+						<blockquote style="width:58%;float:left;margin-left:60px">
+							<img src="static/img16.png">
+
+						</blockquote>	
+												
+					</section>
+
+
+
+					<section data-transition="convex">
+						<h4 style = "">训练数据标注 &nbsp;<strong>机器标注的准则</strong></h2>
+
+						<p style = "font-size:26px">
+							训练数据中使用机器评分是为了补充人工标注的数量。设计的机器标注方法为：
+						</p>
+						<ol style="font-size:24px">
+							<li>从171篇simplewiki的作文随机混入不等量的拼写、介词和动词错误</li>
+							<li>按照以下公式标注：</li>
+						</ol>
+						<p style = "font-size:24px">
+							Sc = round[4(spell + prep + verb)]+2.0
+						</p>
+						<p style = "font-size:26px" align = "left">
+						 spell，prep和verb分别代表拼写，介词使用和动词使用的得分，均是是各自错误率的线性函数。
+							
+
+
+						</p>
+
+						<blockquote style="width:85%;">
+							<img src="static/img17.png">
+
+
+						</blockquote>	
+
+					</section>
+
+
+					<section data-transition="convex">
+						<h4>作文自动评分 &nbsp;<strong>特征设计和提取</strong></h2>
+
+								<p align = 'left' style = "font-size:27px">
+									
+								</p>
+
+
+								
+								
+
+						</blockquote>
+
+						<blockquote style="width:70%;font-style:normal;font-size:26px;">
+							<img src="static/img18.png">
+
+						</blockquote>	
+												
+					</section>
+
+					<section data-transition="convex">
+						<h4>作文评分 &nbsp;<strong>结合典型错误识别的作文评分</strong></h2>
+						
+						<p style = "font-size:26px">
+							由于作文自动评分的标注形式是0-6分的0.5分数值，可以采用回归模型配合近似舍入的方式去实现。<br>
+							文中的拼写错误和介词错误使用典型错误识别模块去实现。
+
+						</p>
+
+
+						<blockquote style = "width:100%;">
+							<img src="static/img19.png">								
+
+				
+						
+							<ul style="font-size:22px;font-family:serif;">
+								<li><strong>最大概率</strong>指用样本中频率最高的分数给任何作文评分。</li>
+					
+
+							</ul>
+						</blockquote>
+					</section>
+
+
+
+					<!--section data-transition="convex">
+						<h4>作文评分 &nbsp;<strong>结合错误识别模块的作文评分实验结果</strong></h2>
+						
+						<p style = "font-size:26px">
+							在特征提取时，采用本文设计的拼写检测识别和介词错误识别（串接两类介词错误）模块进行特征提取，再进行交叉验证的实验结果如下：
+
+
+						</p>
+
+
+						<blockquote style = "width:70%;">
+							<img src="static/img20.png">								
+
+				
+						
+							<ul style="font-size:22px;font-family:serif;">
+								<li>该结果表明，把典型错误识别和作文自动评分技术相结合具有不错的实用价值。</li>
+
+							</ul>
+						</blockquote>
+					</section-->
+				</section>
+
+
+
+
+
+				<section data-background="static/background7.png" data-transition="zoom"  data-background-transition="convex">
+
+					<h2>研究结论</h2>
+						<ul>
+							<li class="fragment fade-in" >介词错误的识别具有较高的水平</li>
+
+							<li class="fragment fade-in" >结合典型错误的英语作文自动评分技术有能力对作文进行综合的评价。
+</li>
+						</ul>	
+
+				</section>
+
+<!--data-background="static/background6.jpg"-->
+				<section  data-transition="slide" data-background="static/background6.jpg" data-background-transition="zoom" > 
+
+					<section >					
+						<a href="http://127.0.0.1:8080/learn/index1.html">
+							<h1>演示环节</h1>
+						</a>
+					
+						<h2>&nbsp;</h2>
+						<h3>&nbsp;</h3>
+						<h3>&nbsp;</h3>
+						<h3>&nbsp;</h3></section>
+					<section data-background-video = "static/example.mov"></section>
+
+
+				</section>
+
+				<section> 
+					<h1>Q&amp;A</h2>
+					<p>
+						感谢各位评审教师的关注，欢迎提问！
+					</p>
+				</section>
+
+				
+
+			</div>
+
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+
+			// Full list of configuration options available at:
+			// https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				controls: true,
+				progress: true,
+				history: true,
+				center: true,
+
+				transition: 'convex', // none/fade/slide/convex/concave/zoom
+
+				// Optional reveal.js plugins
+				dependencies: [
+					{ src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+					{ src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector( '[data-markdown]' ); } },
+					{ src: 'plugin/highlight/highlight.js', async: true, condition: function() { return !!document.querySelector( 'pre code' ); }, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/zoom-js/zoom.js', async: true },
+					{ src: 'plugin/notes/notes.js', async: true }
+				]
+			});
+
+		</script>
+
+	</body>
+</html>

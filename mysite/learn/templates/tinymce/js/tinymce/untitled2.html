@@ -1,0 +1,63 @@
+<!DOCTYPE HTML>
+<html lang="en-US">
+
+<head>
+	<meta charset = 'utf-8'>
+<script type="text/javascript" src="tinymce.min.js"></script>
+<script type="text/javascript" src="jquery-1.7.1.min.js"></script>
+<script> 
+    tinymce.init({
+        selector:"h1.editable#elm2",       //elm2为ID                 可将selector值理解为css中class、ID等，以此使用tinymce中样式（比如编辑框内文本显示样式、工具栏样式）--个人理解，不保证正确
+        inline:true,                       //为true时，编辑工具栏隐藏
+        toolbar:"undo redo",
+        menubar: false
+    });
+    tinymce.init({
+        selector:'textarea#elm1',          //<textarea>中为编辑区域
+        theme: "modern",                  //主题
+        language: "zh_cn",                //语言 ，可自行下载中文
+
+    height: 300,
+    plugins: [                             //插件，可自行根据现实内容删除
+         "advlist autolink lists charmap print preview hr anchor pagebreak spellchecker",
+         "searchreplace wordcount visualblocks visualchars fullscreen insertdatetime  nonbreaking",
+         "save table contextmenu directionality emoticons paste textcolor"
+   ],
+   content_css: "css/content.css",      //引用的外部CSS样式，可删除
+   toolbar: "insertfile undo redo | styleselect fontselect fontsizeselect| bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | l      | print preview fullpage | forecolor backcolor",                          //工具栏，可根据需求删除
+   style_formats: [                        //初始时提供的默认格式
+        {title: 'Bold text', inline: 'b'},
+        {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
+        {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},
+        {title: 'Example 1', inline: 'span', classes: 'example1'},
+        {title: 'Example 2', inline: 'span', classes: 'example2'},
+        {title: 'Table styles'},
+        {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
+    ]
+ }); 
+</script>
+</head>
+<body>
+    <b>Title</b>
+    <br>
+    <div class="activityshow_box" style= "margin-top:40%;width: 100%;display:none;margin-let:15%;margin-right:15%;padding:0;margin:2px 0;">
+    </div>
+
+    <h1 class="editable" id="elm2">这是标题，编辑工具栏隐藏</h1>
+    <textarea id="elm1">文本内容哈</textarea>                 <!-- 编辑框 elm1为此部件ID-->
+    <input type="button" onclick= "doy()"/> 
+
+</body>
+<script>
+    function doy(){
+        var tmp= tinymce.get('elm1').getContent();      //此函数可获得编辑框内容   
+        var tmp2=tinymce.get('elm2').getContent();
+        $('textarea').hide()
+        $('.activityshow_box').show();
+        $('.activityshow_box').append(tmp);
+        tinymce.activeEditor.setContent("<p style='color:red;'>这只是个测试</p>");     //设置编辑框内容   Jquery.text('内容')方法也可以达到设置编辑框内容目的
+        alert(tmp);
+        alert(tmp2);
+    }
+</script>
+</html>

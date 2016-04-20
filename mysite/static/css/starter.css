@@ -1,0 +1,28 @@
+body {
+  padding-top: 50px;
+}
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
+
+.guage {
+    position: relative;
+    width: 203px;
+    margin: 0 auto 40px;
+}
+.arc-gradient {
+    width: 203px;
+    height: 58px;
+}
+.level {
+    height: 30px;
+    width: 2px;
+    background: #fff;
+    overflow: hidden;
+    text-indent: 1em;
+    position: absolute;
+    left: 50%;
+    top: -10px;
+    transform-origin: 0 134px;
+}
